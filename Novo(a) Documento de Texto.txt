@@ -1,0 +1,19 @@
+#theme-toggle {
+    position: fixed; 
+    /* Fixando a posição do botão na tela */
+    top: 10px; 
+    /* Posiciona o botão 10px abaixo do topo da tela */
+    right: 20px; 
+    /* Posiciona o botão 20px à direita da tela */
+    width: 50px; 
+    /* Define a largura do botão */
+    height: 20px; 
+    /* Define a altura do botão */
+    background: #ccc; 
+    /* Cor de fundo do botão */
+    border-radius: 30px; 
+    /* Borda arredondada para o botão */
+    cursor: pointer; 
+    /* Altera o cursor para indicar que é clicável */
+    transition: background 0.3s;
+}

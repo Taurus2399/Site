@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> 
+    <!-- Define o idioma da página como português brasileiro -->
+<head>
+    <meta charset="UTF-8"> 
+    <!-- Define o conjunto de caracteres para a página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Responsividade para dispositivos móveis -->
+    <title>Metas de Leitura</title> 
+    <!-- Título da página -->
+    <link rel="stylesheet" href="style.css"> 
+    <!-- Vincula o arquivo de estilo CSS -->
+</head>
+<body>
+
+    <header>
+        <!-- Cabeçalho da página, geralmente contém informações principais e navegação -->
+        <div class="title-container">
+            <h1>Minha Biblioteca</h1>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Pesquisar...">
+        </div>
+        <div class="explore-container">
+            <button id="explore-btn">Explorar</button>
+            <div id="explore-options" class="explore-options">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="biblioteca.html">Biblioteca</a></li>
+                    <li><a href="progresso.html">Progresso</a></li>
+                    <li><a href="metas.html">Metas</a></li>
+                </ul>
+            </div>
+        </div>
+        <button id="theme-toggle"></button> 
+        <!-- Botão para alternar entre os temas (escuro/claro) -->
+    </header>
+
+    <main>
+        <section>
+            <h2>Metas de Leitura</h2> 
+            <!-- Título da seção de metas de leitura -->
+            <p>Defina e acompanhe suas metas de leitura.</p>
+            <img src="manutenção.gif" alt="Site em manutenção" width="600" height="245"> 
+            <!-- Descrição da funcionalidade da página -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Minha Biblioteca</p> 
+        <!-- Rodapé com o copyright -->
+    </footer>
+    
+    <script src="script.js"></script> 
+    <!-- Vincula o arquivo de script JavaScript -->
+
+    <script>
+        document.getElementById("explore-btn").addEventListener("click", function() {
+            var options = document.getElementById("explore-options");
+            options.style.display = options.style.display === "block" ? "none" : "block";
+        });
+    </script>
+</body>
+</html>

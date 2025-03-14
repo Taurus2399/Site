@@ -1,0 +1,319 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte do texto como Arial ou, se não disponível, sans-serif */
+    margin: 0; /* Remove a margem padrão da página */
+    padding: 0; /* Remove o preenchimento interno da página */
+    transition: background 0.3s, color 0.3s; /* Transição suave de 0.3 segundos para alterações de fundo e cor */
+    display: flex; /* Define o layout como flexbox */
+    flex-direction: column; /* Organiza os itens na página na direção vertical */
+    align-items: center; /* Alinha os itens no centro da página */
+    text-align: center; /* Alinha o texto no centro */
+    background: #f5f5f5; /* Define o fundo da página como cinza claro */
+}
+
+/* Tema Claro */
+body.light-theme {
+    color: #333; /* Cor do texto no tema claro */
+    background: #f5f5f5; /* Fundo da página no tema claro */
+}
+
+/* Tema Escuro */
+body.dark-theme {
+    color: #fff; /* Cor do texto no tema escuro */
+    background: #121212; /* Fundo da página no tema escuro */
+}
+
+/* Cabeçalho */
+header {
+    display: flex; /* Layout flexbox para o cabeçalho */
+    flex-direction: row; /* Organiza os itens na horizontal */
+    justify-content: space-between; /* Espaça os itens igualmente nas extremidades */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    background-color: #8B0000; /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto no cabeçalho */
+    padding: 30px 20px; /* Preenchimento do cabeçalho */
+    width: 100%; /* O cabeçalho ocupa toda a largura da tela */
+    position: relative; /* Posicionamento relativo do cabeçalho */
+}
+
+body.light-theme header {
+    background-color: #8B0000; /* Cor de fundo do cabeçalho no tema claro */
+    color: black; /* Cor do texto no cabeçalho no tema claro */
+}
+
+body.dark-theme header {
+    background-color: #600000; /* Cor de fundo do cabeçalho no tema escuro */
+}
+
+h1 {
+    font-size: 2rem; /* Tamanho da fonte do título */
+    margin: 0; /* Remove a margem ao redor do título */
+    position: absolute; /* Posiciona o título de forma absoluta dentro do cabeçalho */
+    left: 50%; /* Coloca o título no meio da tela */
+    transform: translateX(-50%); /* Ajusta o título para que fique exatamente no meio */
+    top: 35px; /* Ajusta a posição vertical do título */
+}
+
+/* Barra de Pesquisa */
+.search-container {
+    display: flex; /* Layout flexbox para a barra de pesquisa */
+    align-items: center; /* Alinha os itens da barra de pesquisa ao centro */
+    justify-content: center; /* Justifica os itens ao centro */
+}
+
+#search {
+    padding: 5px; /* Preenchimento interno da barra de pesquisa */
+    font-size: 1rem; /* Tamanho da fonte na barra de pesquisa */
+    border: none; /* Remove a borda do campo de pesquisa */
+    border-radius: 20px; /* Deixa os cantos arredondados */
+    width: 250px; /* Largura da barra de pesquisa */
+    margin-right: 10px; /* Espaçamento à direita da barra de pesquisa */
+}
+
+/* Botão de Explorar */
+.explore-container {
+    position: fixed; /* Posiciona o botão de explorar de forma fixa na tela */
+}
+
+#explore-btn {
+    padding: 10px 15px; /* Preenchimento do botão */
+    font-size: 1rem; /* Tamanho da fonte no botão */
+    background-color: #600000; /* Cor de fundo do botão */
+    color: white; /* Cor do texto no botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 20px; /* Cantos arredondados no botão */
+    cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo ao passar o mouse */
+}
+
+#explore-btn:hover {
+    background-color: #444; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Menu de Exploração */
+.explore-options {
+    display: none; /* Inicialmente o menu está oculto */
+    position: absolute; /* Posiciona o menu de forma absoluta dentro do botão */
+    top: 40px; /* Ajusta a posição vertical do menu */
+    right: 0; /* Ajusta a posição horizontal do menu à direita */
+    background-color: #8B0000; /* Cor de fundo do menu */
+    border-radius: 5px; /* Arredonda os cantos do menu */
+    padding: 10px; /* Preenchimento interno do menu */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra no menu */
+}
+
+.explore-options.active {
+    display: block; /* Exibe o menu quando a classe "active" é adicionada */
+}
+
+.explore-options ul {
+    list-style: none; /* Remove a lista numerada ou com marcadores */
+    padding: 0; /* Remove o preenchimento da lista */
+    margin: 0; /* Remove a margem da lista */
+}
+
+.explore-options ul li {
+    margin-bottom: 10px; /* Espaçamento entre os itens do menu */
+}
+
+.explore-options ul li a {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 1rem; /* Tamanho da fonte dos links */
+}
+
+.explore-options ul li a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Botão de alternância de tema */
+#theme-toggle {
+    position: fixed; /* Posiciona o botão de alternância de tema de forma fixa */
+    top: 5px; /* Ajusta a posição vertical do botão */
+    right: 20px; /* Ajusta a posição horizontal do botão */
+    width: 50px; /* Largura do botão */
+    height: 20px; /* Altura do botão */
+    background: #ccc; /* Cor de fundo do botão */
+    border-radius: 30px; /* Arredonda os cantos do botão */
+    cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+    transition: background 0.3s; /* Transição suave para a cor de fundo */
+}
+
+#theme-toggle::before {
+    content: ""; /* Cria um círculo dentro do botão */
+    position: absolute; /* Posiciona o círculo de forma absoluta dentro do botão */
+    width: 12px; /* Largura do círculo */
+    height: 12px; /* Altura do círculo */
+    background: white; /* Cor do círculo */
+    border-radius: 50%; /* Deixa o círculo redondo */
+    top: 4px; /* Ajusta a posição vertical do círculo */
+    left: 6px; /* Ajusta a posição horizontal do círculo */
+    transition: left 0.3s; /* Transição suave para a posição do círculo */
+}
+
+.dark-theme #theme-toggle {
+    background: #444; /* Cor de fundo do botão no tema escuro */
+}
+
+.dark-theme #theme-toggle::before {
+    left: 32px; /* Ajusta a posição do círculo no tema escuro */
+    background: #fff; /* Cor do círculo no tema escuro */
+}
+
+/* Barra de Navegação */
+nav {
+    width: 100%; /* A barra de navegação ocupa toda a largura da tela */
+    background: #600000; /* Cor de fundo da barra de navegação */
+    padding: 10px 0; /* Preenchimento interno da barra */
+    position: relative; /* Posicionamento relativo da barra */
+    top: 10px; /* Ajusta a posição vertical da barra */
+}
+
+nav ul {
+    list-style: none; /* Remove a lista numerada ou com marcadores */
+    padding: 0; /* Remove o preenchimento da lista */
+    margin: 0; /* Remove a margem da lista */
+    display: flex; /* Layout flexbox para os itens do menu */
+    justify-content: center; /* Centraliza os itens do menu */
+}
+
+nav ul li {
+    margin: 0 15px; /* Espaçamento entre os itens do menu */
+}
+
+nav ul li a {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 1.2rem; /* Tamanho da fonte dos links */
+    transition: color 0.3s; /* Transição suave para a cor do texto */
+}
+
+nav ul li a:hover {
+    color: #f5f5f5; /* Cor do texto ao passar o mouse */
+}
+
+/* Conteúdo Principal */
+main {
+    flex-grow: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+    width: 100%; /* O conteúdo ocupa toda a largura */
+    background: white; /* Cor de fundo do conteúdo principal */
+    min-height: 300px; /* Altura mínima do conteúdo */
+}
+
+/* Tema Claro */
+.light-theme main {
+    background: white; /* Cor de fundo do conteúdo no tema claro */
+}
+
+/* Tema Escuro */
+.dark-theme main {
+    background: #1e1e1e; /* Cor de fundo do conteúdo no tema escuro */
+}
+
+/* Catálogo de Livros */
+.catalog {
+    max-width: 900px; /* Largura máxima do catálogo */
+    margin: 20px auto; /* Margem automática para centralizar o catálogo */
+    padding: 20px; /* Preenchimento interno do catálogo */
+    border-radius: 10px; /* Arredonda os cantos do catálogo */
+    background: white; /* Cor de fundo do catálogo */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra no catálogo */
+}
+
+body.dark-theme .catalog {
+    background: #2a2a2a; /* Cor de fundo do catálogo no tema escuro */
+}
+
+/* Formulário de adição de livros */
+.add-book-form {
+    background: rgba(255, 255, 255, 0.9); /* Cor de fundo do formulário com leve transparência */
+    padding: 20px; /* Preenchimento interno do formulário */
+    border-radius: 10px; /* Arredonda os cantos do formulário */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra no formulário */
+    display: flex; /* Layout flexbox para o formulário */
+    flex-direction: column; /* Organiza os campos do formulário verticalmente */
+    gap: 5px; /* Espaçamento entre os campos */
+}
+
+/* Ajuste para o tema escuro no formulário */
+body.dark-theme .add-book-form {
+    background: rgba(50, 50, 50, 0.9); /* Cor de fundo do formulário no tema escuro */
+}
+
+/* Campos do formulário com tamanho uniforme */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%; /* Campos ocupam 100% da largura disponível */
+    max-width: 400px; /* Largura máxima dos campos */
+    padding: 10px; /* Preenchimento interno dos campos */
+    margin: 8px 0; /* Margem acima e abaixo dos campos */
+    border-radius: 5px; /* Arredonda os cantos dos campos */
+    border: 1px solid #ccc; /* Borda dos campos */
+    box-sizing: border-box; /* Inclui a borda e o preenchimento no cálculo da largura e altura */
+}
+
+/* Grupo de opções (género, status, formato, posse) */
+.add-book-form .form-group {
+    display: flex; /* Layout flexbox para os grupos de opções */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    justify-content:center; /* Espaçamento entre os itens */
+    gap: 5px; /* Espaçamento entre os itens */
+}
+
+.add-book-form .form-group label {
+    flex: 1 0 100%; /* Faz o label ocupar toda a largura disponível */
+    margin-bottom: 5px; /* Espaçamento abaixo do label */
+}
+
+.add-book-form .form-group select {
+    flex: 1 0 45%; /* Faz os selects ocuparem metade da largura disponível */
+}
+
+/* Botão de adicionar */
+button {
+    width: 100%; /* O botão ocupa toda a largura disponível */
+    max-width: 400px; /* Largura máxima do botão */
+    background: #8B0000; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    padding: 10px; /* Preenchimento interno do botão */
+    cursor: pointer; /* Indica que o botão é clicável */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+button:hover {
+    background: #a00000; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Lista de livros */
+.book-list {
+    display: grid; /* Layout de grade para a lista de livros */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Define a quantidade de colunas com largura mínima */
+    gap: 15px; /* Espaçamento entre os itens da lista */
+    margin-top: 20px; /* Margem superior */
+}
+
+/* Cada item da lista */
+.book-item {
+    background: white; /* Cor de fundo do item */
+    padding: 15px; /* Preenchimento do item */
+    border-radius: 10px; /* Cantos arredondados no item */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra no item */
+}
+
+body.dark-theme .book-item {
+    background: #2a2a2a; /* Cor de fundo do item no tema escuro */
+}
+
+/* Links do catálogo */
+.book-item a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #8B0000; /* Cor do texto do link */
+    font-weight: bold; /* Deixa o texto do link em negrito */
+}
+
+.book-item a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}

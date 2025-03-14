@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <!-- Define o idioma da página como português brasileiro -->
+
+<head>
+    <!-- Cabeçalho da página -->
+    <meta charset="UTF-8"> 
+    <!-- Define o conjunto de caracteres para a página, garantindo que todos os caracteres especiais sejam exibidos corretamente -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Torna a página responsiva, ou seja, se adapta a diferentes tamanhos de tela (móvel, tablet, desktop) -->
+    <title>Minha Biblioteca</title> 
+    <!-- Define o título que aparece na aba do navegador -->
+    <link rel="stylesheet" href="style.css"> 
+    <!-- Vincula o arquivo de estilo CSS, que define a aparência da página -->
+</head>
+
+<body>
+    <!-- Corpo da página -->
+    
+    <header>
+        <!-- Cabeçalho da página, geralmente contém informações principais e navegação -->
+        <div class="title-container">
+            <h1>Minha Biblioteca</h1>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Pesquisar...">
+        </div>
+        <div class="explore-container">
+            <button id="explore-btn">Explorar</button>
+            <div id="explore-options" class="explore-options">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="biblioteca.html">Biblioteca</a></li>
+                    <li><a href="progresso.html">Progresso</a></li>
+                    <li><a href="metas.html">Metas</a></li>
+                </ul>
+            </div>
+        </div>
+        <button id="theme-toggle"></button> 
+        <!-- Botão para alternar entre os temas (escuro/claro) -->
+    </header>
+
+    <main>
+        <!-- Seção principal do conteúdo da página -->
+        <section>
+            <!-- Uma seção específica de conteúdo -->
+            <h2>Bem-vindo à sua Biblioteca Pessoal!</h2> 
+            <!-- Subtítulo da seção de boas-vindas -->
+            <p>Gerencie seus livros, acompanhe seu progresso e estabeleça metas de leitura.</p>
+            <!-- Descrição do que o usuário pode fazer no site -->
+            <img src="manutenção.gif" alt="Site em manutenção" width="600" height="245">
+            <!-- Imagem que indica que o site está em manutenção, com largura de 600px e altura de 245px -->
+        </section>
+    </main>
+
+    <footer>
+        <!-- Rodapé da página -->
+        <p>&copy; 2025 Minha Biblioteca</p>  
+        <!-- Texto de copyright indicando os direitos reservados para o ano de 2025 -->
+    </footer>
+    
+    <script src="script.js"></script> 
+    <!-- Vincula o arquivo de script JavaScript que contém funcionalidades interativas -->
+
+    <script>
+        document.getElementById("explore-btn").addEventListener("click", function() {
+            var options = document.getElementById("explore-options");
+            options.style.display = options.style.display === "block" ? "none" : "block";
+        });
+    </script>
+</body>
+
+</html>
+
+
